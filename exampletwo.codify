@@ -1,0 +1,20 @@
+OpenCodify
+create playlist main(){
+    lyrics:this is a comment
+    add a to playlist with time = 10;
+    add b to playlist with title = 'hi';
+    play(a)
+    play(b)
+    repeat until ('a==1') {
+        add a to playlist with time c= 'a-1';
+        play(a)
+    }
+    listen for truth:: ('a==1')
+    sounds good! {
+        play(a)
+    }
+    its a skip{
+        play(b)
+    }
+}
+CloseCodify

@@ -1,0 +1,93 @@
+program:
+  'OpenCodify'
+  main
+  'CloseCodify';
+
+main:
+ create=ID 
+ playlist=ID 
+ name=ID
+ '('
+ ')'
+ '{'
+ statements*=statement
+ '}'
+ ;
+
+statement: 
+  Assignment | printvar | printstring | loop | comments | if | ifelse
+  ;
+
+if:
+'listen for truth:' '('bool=STRING')'
+'sounds good!'
+('{'statements*=statement'}')?
+;
+
+ifelse:
+'listen for truth::' '('bool=STRING')'
+'sounds good!' 
+'{'
+Ifbody=ifbody
+'}'
+'its a skip'
+'{'
+Elsebody=elsebody
+'}'
+;
+
+ifbody:
+(statements*=statement)?
+;
+
+elsebody:
+(statements*=statement)?
+;
+
+loop:
+  'repeat until' '(' bool=STRING ')' ('{'statements*=statement'}')? 
+  ;
+
+printvar:
+  'play(' variable=ID ')'
+;
+
+printstring:
+  'play(' string=STRING ')'
+;
+
+Assignment: 
+  intAssignment | stringAssignment | calcAssignment
+;
+
+intAssignment:
+  'add'
+  variable=ID 
+  'to playlist with' 
+  time=ID
+  '='
+  val=INT ';'
+  ;
+
+stringAssignment:
+  'add'
+  variable=ID 
+  'to playlist with' 
+  title=ID
+  '='
+  val=STRING ';'
+  ;
+
+calcAssignment: 
+  'add'
+  variable=ID 
+  'to playlist with' 
+  time=ID
+  'c='
+  expression=STRING ';'
+  ;
+
+
+comments:
+    /lyrics:.*$/
+;

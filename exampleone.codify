@@ -1,0 +1,10 @@
+OpenCodify
+
+create playlist main(){
+add a to playlist with time c= '5+6';
+play(a)
+add b to playlist with title = 'Hello World';
+play(b)
+}
+
+CloseCodify

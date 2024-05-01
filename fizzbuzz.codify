@@ -1,0 +1,27 @@
+OpenCodify
+create playlist main(){
+add a to playlist with time = 1;
+    repeat until ('a==101') {
+        listen for truth:: ('a%15==0')
+        sounds good! {
+            play('fizzbuzz')
+        }
+        its a skip{
+            listen for truth:: ('a%3==0') 
+            sounds good! {
+                play('fizz')
+            }
+            its a skip{
+                listen for truth:: ('a%5==0')
+                sounds good!{
+                    play('buzz')
+                }
+                its a skip{
+                    play(a)
+                }
+            }
+        }
+        add a to playlist with time c= 'a+1';
+    }
+}
+CloseCodify
