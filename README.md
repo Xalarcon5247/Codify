@@ -1,1 +1,1 @@
-A simple, silly music app themed interpreted programming language implemented using. Users are able to 
+A simple, fun music app-themed programming language implemented using sing textX (Python) for modeling playlist-like control structures and flow logic using music-inspired syntax. Built a parser, custom grammar, and interpreter capable of conditionals and and loops. Examples are included, such as FizzBuzz.
