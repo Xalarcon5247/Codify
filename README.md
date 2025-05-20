@@ -1,1 +1,1 @@
-A simple interpreted programming language with the ability to create 
+A simple, silly music app themed interpreted programming language implemented using. Users are able to 
